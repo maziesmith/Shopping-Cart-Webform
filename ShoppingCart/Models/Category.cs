@@ -6,20 +6,20 @@ using System.Web;
 /// <summary>
 /// Summary description for Categories
 /// </summary>
-public class Category
+/// 
+namespace ShoppingCart.Models
 {
-    [ScaffoldColumn(false)]
-    public int CategoryID { get; set; }
-    
-    [Required, StringLength(200), Display(Name="Name")]
-    public string CategoryName { get; set; }
+    public class Category
+    {
+        [ScaffoldColumn(false)]
+        public int CategoryID { get; set; }
 
-    [Display(Name="Product Description")]
-    public string Description { get; set; }
+        [Required, StringLength(100), Display(Name = "Name")]
+        public string CategoryName { get; set; }
 
-    public virtual ICollection<Product> Products { get; set; }
+        [Display(Name = "Product Description")]
+        public string Description { get; set; }
 
-	public Category()
-	{
-	}
+        public virtual ICollection<Product> Products { get; set; }
+    }
 }

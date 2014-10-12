@@ -1,4 +1,4 @@
-﻿<%@ master language="C#" autoeventwireup="true" codebehind="Site.master.cs" inherits="ShoppingCart.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ShoppingCart.SiteMaster" %>
 
 <!DOCTYPE html>
 
@@ -12,7 +12,7 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
@@ -54,11 +54,28 @@
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
+                        <li><a runat="server" href="~/ProductList">Products</a></li>
                     </ul>
                 </div>
             </div>
         </div>
+
         <div class="container body-content">
+            <br />
+            <!-- Display Categories Menu -->
+            <div>
+                <asp:ListView ID="categoryList"
+                    ItemType="ShoppingCart.Models.Category"
+                    runat="server"
+                    SelectMethod="GetCategories">
+                    <ItemTemplate>
+                            <a class="btn btn-default" href="<%#: GetRouteUrl("ProductsByCategoryRoute", new {categoryName = Item.CategoryName}) %>">
+                                <i class="glyphicon glyphicon-tag"></i>
+                                <%#: Item.CategoryName %>
+                            </a>
+                    </ItemTemplate>
+                </asp:ListView>
+            </div>
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />

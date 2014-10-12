@@ -6,7 +6,8 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
-
+using System.Data.Entity;
+using ShoppingCart.Models;
 namespace ShoppingCart
 {
     public class Global : HttpApplication
@@ -16,6 +17,18 @@ namespace ShoppingCart
             // Code that runs on application startup
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            //Initialize the product database
+            Database.SetInitializer(new ProductDatabaseInitializer());
+            //Custom route
+            RegisterCustomRoutes(RouteTable.Routes);
+        }
+        void RegisterCustomRoutes(RouteCollection routes)
+        {
+            routes.MapPageRoute(
+                "ProductsByCategoryRoute",
+                "Category/{categoryName}",
+                "~/ProductList.aspx"
+            );
         }
     }
 }
