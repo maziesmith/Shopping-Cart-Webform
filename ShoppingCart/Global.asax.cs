@@ -29,6 +29,11 @@ namespace ShoppingCart
                 "Category/{categoryName}",
                 "~/ProductList.aspx"
             );
+            routes.MapPageRoute(
+              "ProductByNameRoute",
+              "Product/{productName}",
+              "~/ProductDetails.aspx"
+          );
         }
     }
 }

@@ -146,7 +146,7 @@ namespace ShoppingCart.Models
                 new Product
                 {
                     ProductID = 12,
-                    ProductName = "Amazon Kindle Fire HDX 8.9\"",
+                    ProductName = "Amazon Kindle Fire HDX",
                     Description = "Go beyond HD.",
                     ImagePath="Tablets/amazon_hdx_89.jpg",
                     UnitPrice = 379.00,

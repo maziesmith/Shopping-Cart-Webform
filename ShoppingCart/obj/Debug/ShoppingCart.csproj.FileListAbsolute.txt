@@ -45,6 +45,6 @@ C:\Users\Thanh\Desktop\Work\Shopping-Cart-Webform\ShoppingCart\bin\EntityFramewo
 C:\Users\Thanh\Desktop\Work\Shopping-Cart-Webform\ShoppingCart\bin\Newtonsoft.Json.xml
 C:\Users\Thanh\Desktop\Work\Shopping-Cart-Webform\ShoppingCart\bin\System.Web.Optimization.xml
 C:\Users\Thanh\Desktop\Work\Shopping-Cart-Webform\ShoppingCart\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\Thanh\Desktop\Work\Shopping-Cart-Webform\ShoppingCart\obj\Debug\ShoppingCart.csprojResolveAssemblyReference.cache
 C:\Users\Thanh\Desktop\Work\Shopping-Cart-Webform\ShoppingCart\obj\Debug\ShoppingCart.dll
 C:\Users\Thanh\Desktop\Work\Shopping-Cart-Webform\ShoppingCart\obj\Debug\ShoppingCart.pdb
-C:\Users\Thanh\Desktop\Work\Shopping-Cart-Webform\ShoppingCart\obj\Debug\ShoppingCart.csprojResolveAssemblyReference.cache
